@@ -2,9 +2,189 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+  <title>Introducing... Degtyarik Ilya!</title>
 </head>
 <body>
-$END$
+<div id="container" class="container">
+  <div class="sider">
+
+    <div class="profile">
+      <div class="photo">
+        <img src="photo.jpg">
+      </div>
+      <h2>
+        Degtyarik Ilya<br>
+        <span>Web Developer</span>
+      </h2>
+    </div>
+
+    <div class="contacts">
+      <h3 class="title">Contact info</h3>
+
+      <ul>
+        <li>
+          <span class="icon"><i class="fa-solid fa-mobile"></i></span>
+          <span class="details">+375 29 832 30 63</span>
+        </li>
+        <li>
+          <span class="icon"><i class="fa-solid fa-at"></i></span>
+          <span class="details">degtyarik.ilya@gmail.com</span>
+        </li>
+        <li>
+          <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+          <span class="details">Belarus, Brest</span>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="contacts education">
+      <h3 class="title">Education</h3>
+
+      <ul>
+        <li>
+          <h5>2017 - 2021</h5>
+          <h4>Programmable mobile systems</h4>
+          <h4>Brest State Technical University</h4>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="contacts languages">
+      <h3 class="title">Languages</h3>
+
+      <ul>
+        <li>
+          <span class="title">Russian</span>
+          <span class="percent">
+            <div style="width: 90%"> </div>
+          </span>
+        </li>
+        <li>
+          <span class="title">Belarusian</span>
+          <span class="percent">
+            <div style="width: 95%"> </div>
+          </span>
+        </li>
+        <li>
+          <span class="title">English</span>
+          <span class="percent">
+            <div style="width: 50%"> </div>
+          </span>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="about">
+      <h2 class="about_title">Profile</h2>
+      <p>Сюда что-нибудь о себе</p>
+    </div>
+
+    <div class="about">
+      <h2 class="about_title">Experience</h2>
+
+      <div class="experience">
+        <div class="company_and_year">
+          <h5>2021 - Present</h5>
+          <h5>EpolSoft</h5>
+        </div>
+        <div class="description">
+          <h4>Middle Frontend Developer</h4>
+          <p>Чота про работу</p>
+        </div>
+      </div>
+
+      <div class="experience">
+        <div class="company_and_year">
+          <h5>2021 - Present</h5>
+          <h5>EpolSoft</h5>
+        </div>
+        <div class="description">
+          <h4>Middle Frontend Developer</h4>
+          <p>Чота про работу</p>
+        </div>
+      </div>
+
+      <div class="experience">
+        <div class="company_and_year">
+          <h5>2021 - Present</h5>
+          <h5>EpolSoft</h5>
+        </div>
+        <div class="description">
+          <h4>Middle Frontend Developer</h4>
+          <p>Чота про работу</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about skills">
+      <h2 class="about_title">Professional skills</h2>
+
+      <div class="experience">
+        <h4>HTML</h4>
+        <div class="percent">
+          <div style="width: 50%"></div>
+        </div>
+      </div>
+      <div class="experience">
+        <h4>React.js</h4>
+        <div class="percent">
+          <div style="width: 30%"></div>
+        </div>
+      </div>
+      <div class="experience">
+        <h4>Redux</h4>
+        <div class="percent">
+          <div style="width: 85%"></div>
+        </div>
+      </div>
+      <div id="breakable" class="experience">
+        <h4>CSS/S<span class="clickable">[AC]</span>SS</h4>
+        <div class="percent">
+          <div class="clickable" onclick="onCssPercentClick()" id="css-percent" style="width: 70%"></div>
+        </div>
+      </div>
+      <div class="experience">
+        <h4>PostgreSQL</h4>
+        <div class="percent">
+          <div style="width: 90%"></div>
+        </div>
+      </div>
+
+      <div class="others">
+        <h4>Other:</h4>
+        <span>Scrum</span>
+        <span>Node-RED</span>
+        <span>Express</span>
+        <span>Git</span>
+        <span>Docker</span>
+        <span>PostgreSQL</span>
+      </div>
+    </div>
+
+    <div class="about interest">
+      <h2 class="about_title">Interests</h2>
+
+      <ul>
+        <li><i class="fa-solid fa-gamepad"></i></i>Gaming</li>
+        <li><i class="fa-solid fa-book"></i>Reading</li>
+        <li><i class="fa-solid fa-code"></i>Coding</li>
+        <li><i class="fa-solid fa-utensils"></i>Cooking</li>
+      </ul>
+
+    </div>
+  </div>
+
+</div>
 </body>
 </html>

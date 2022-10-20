@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #94D6EE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  color: #333
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 50px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.15)
+}
+
+.container .sider {
+  position: relative;
+  padding: 40px;
+  background: #22586B;
+}
+
+.container .main {
+  position: relative;
+  padding: 40px;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile h2 {
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.profile h2 span {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.photo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.photo img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contacts {
+  padding-top: 40px;
+}
+
+.contacts ul {
+  position: relative;
+}
+
+.contacts ul li {
+  position: relative;
+  margin: 10px 0;
+  list-style: none;
+}
+
+.contacts ul li .icon {
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  font-size: 18px;
+  color: #42A9CF;
+}
+
+.contacts ul li span {
+  font-weight: 300;
+  color: #fff;
+}
+
+.contacts.education li {
+  margin-bottom: 15px;
+}
+
+.contacts.education h5 {
+  color: #42A9CF;
+  font-weight: 600;
+}
+
+.contacts.education h4 {
+  color: #fff;
+  font-weight: 300;
+}
+
+.contacts.education h4:nth-child(2) {
+  color: #fff;
+  font-weight: 600;
+}
+
+.contacts.languages .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #183D4A;
+  display: block;
+  margin-top: 5px;
+}
+
+.contacts.languages .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 3px;
+  background: #42A9CF;
+}
+
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.about {
+  margin-bottom: 50px;
+}
+
+.about:last-child {
+  margin-bottom: 0;
+}
+
+.about_title {
+  color: #22586B;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .experience {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.about .experience .company_and_year {
+  min-width: 150px;
+}
+
+.about .experience .company_and_year h5 {
+  text-transform: uppercase;
+  color: #6FA0B3;
+  font-weight: 600;
+}
+
+.about .experience .description h4 {
+  text-transform: uppercase;
+  color: #42A9CF;
+  font-size: 16px;
+}
+
+.skills .experience {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills .experience h4 {
+  text-transform: uppercase;
+  color: #6FA0B3;
+  font-weight: 600;
+}
+
+.skills .experience .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #CFEBF5;
+}
+
+.skills .experience .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  height: 100%;
+  background: #42A9CF;
+}
+
+.skills .others {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  gap: 16px;
+}
+
+.skills .others span {
+  padding: 2px 5px;
+  border: 1px solid #42A9CF;
+  border-radius: 5px;
+  background: #6FA0B3;
+  color: #fff;
+}
+
+.skills .others h4 {
+  font-weight: 600;
+  width: 100%;
+}
+
+.interest ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.interest ul li {
+  list-style: none;
+  color: #22586B;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.interest ul li .fa-solid {
+  color: #42A9CF;
+  font-size: 20px;
+  width: 30px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+#css-percent.animated {
+  animation: breakout 5s forwards;
+  z-index: 1;
+}
+
+#container.animated {
+  animation: shake 0.3s 0.5s, shake 0.3s 1s;
+}
+
+#breakable.animated::after {
+  content: '';
+  position: absolute;
+  right: -90px;
+  width: 50px;
+  height: 50px;
+  clip-path: polygon(12% 36%, 29% 25%, 16% 52%, 31% 76%, 13% 68%, 19% 86%, 0 75%, 0 36%, 16% 9%);
+  background: #fff;
+}
+
+@keyframes breakout {
+  0% {width: 70%;}
+  10% {width: 100%}
+  20% {width: calc(100% + 40px)}
+  100% {width: 100vw}
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  20% { transform: translate(-1px, -2px) rotate(-1deg); }
+  40% { transform: translate(-3px, 0px) rotate(1deg); }
+  60% { transform: translate(1px, 2px) rotate(0deg); }
+  80% { transform: translate(-2px, 2px) rotate(1deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 10px;
+    grid-template-columns: 1fr;
+  }
+  .interest ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about .experience {
+    flex-direction: column;
+  }
+
+  .about .experience .company_and_year {
+    margin-bottom: 10px;
+  }
+
+  .interest ul {
+    grid-template-columns: 1fr;
+  }
+
+  .skills .experience {
+    grid-template-columns: 1fr;
+  }
+
+  #breakable.animated::after {
+    top: 2px
+  }
+}
