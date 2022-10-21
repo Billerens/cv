@@ -6,9 +6,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
-  <title>Introducing... Degtyarik Ilya!</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/index.js"></script>
+  <title>CV. I guess...</title>
 </head>
 <body>
 <div id="container" class="container">
@@ -16,7 +16,7 @@
 
     <div class="profile">
       <div class="photo">
-        <img src="photo.jpg">
+        <img src="assets/photo.jpg" alt="photo">
       </div>
       <h2>
         Degtyarik Ilya<br>
@@ -64,19 +64,19 @@
         <li>
           <span class="title">Russian</span>
           <span class="percent">
-            <div style="width: 90%"> </div>
+            <div style="width: 90%"></div>
           </span>
         </li>
         <li>
           <span class="title">Belarusian</span>
           <span class="percent">
-            <div style="width: 95%"> </div>
+            <div style="width: 95%"></div>
           </span>
         </li>
         <li>
           <span class="title">English</span>
           <span class="percent">
-            <div style="width: 50%"> </div>
+            <div style="width: 50%"></div>
           </span>
         </li>
       </ul>
@@ -87,7 +87,10 @@
   <div class="main">
     <div class="about">
       <h2 class="about_title">Profile</h2>
-      <p>Сюда что-нибудь о себе</p>
+      <p>Motivated developer with nice skills for productive work.<br/>
+        During a little more than a 1.5 year of professional work, I have experience in successful mentoring
+        with subsequent employment of 5 protégés, also participated in various stages of the development of 6
+        commercial projects.</p>
     </div>
 
     <div class="about">
@@ -95,34 +98,34 @@
 
       <div class="experience">
         <div class="company_and_year">
-          <h5>2021 - Present</h5>
+          <h5>06/2019 - 12/2019</h5>
           <h5>EpolSoft</h5>
         </div>
         <div class="description">
-          <h4>Middle Frontend Developer</h4>
-          <p>Чота про работу</p>
+          <h4>Junior Fullstack Developer</h4>
+          <p>Auto-posting application, interactive timetable</p>
         </div>
       </div>
 
       <div class="experience">
         <div class="company_and_year">
-          <h5>2021 - Present</h5>
+          <h5>03/2021 - Present</h5>
           <h5>EpolSoft</h5>
         </div>
         <div class="description">
-          <h4>Middle Frontend Developer</h4>
-          <p>Чота про работу</p>
+          <h4>Junior/Middle Frontend Developer</h4>
+          <p>Employees certification platforms, meteorology monitoring platform</p>
         </div>
       </div>
 
       <div class="experience">
         <div class="company_and_year">
-          <h5>2021 - Present</h5>
-          <h5>EpolSoft</h5>
+          <h5>2022 - Present</h5>
+          <h5></h5>
         </div>
         <div class="description">
-          <h4>Middle Frontend Developer</h4>
-          <p>Чота про работу</p>
+          <h4>Part-Time Middle Frontend Developer</h4>
+          <p>Development organization platform, cryptocurrency payment platform</p>
         </div>
       </div>
     </div>
@@ -133,31 +136,26 @@
       <div class="experience">
         <h4>HTML</h4>
         <div class="percent">
-          <div style="width: 50%"></div>
+          <div style="width: 65%"></div>
         </div>
       </div>
       <div class="experience">
         <h4>React.js</h4>
         <div class="percent">
-          <div style="width: 30%"></div>
+          <div style="width: 70%"></div>
         </div>
       </div>
       <div class="experience">
         <h4>Redux</h4>
         <div class="percent">
-          <div style="width: 85%"></div>
-        </div>
-      </div>
-      <div id="breakable" class="experience">
-        <h4>CSS/S<span class="clickable">[AC]</span>SS</h4>
-        <div class="percent">
-          <div class="clickable" onclick="onCssPercentClick()" id="css-percent" style="width: 70%"></div>
+          <div style="width: 65%"></div>
         </div>
       </div>
       <div class="experience">
-        <h4>PostgreSQL</h4>
+        <div id="break"></div>
+        <h4>CSS/S<span class="clickable">[AC]</span>SS</h4>
         <div class="percent">
-          <div style="width: 90%"></div>
+          <div class="clickable" onclick="onCssPercentClick()" id="css-percent" style="width: 55%"></div>
         </div>
       </div>
 
@@ -176,10 +174,10 @@
       <h2 class="about_title">Interests</h2>
 
       <ul>
-        <li><i class="fa-solid fa-gamepad"></i></i>Gaming</li>
-        <li><i class="fa-solid fa-book"></i>Reading</li>
-        <li><i class="fa-solid fa-code"></i>Coding</li>
-        <li><i class="fa-solid fa-utensils"></i>Cooking</li>
+        <li><i class="fa-solid fa-gamepad"></i><span>Gaming</span></li>
+        <li><i class="fa-solid fa-book"></i><span>Reading</span></li>
+        <li><i class="fa-solid fa-code"></i><span>Coding</span></li>
+        <li><i class="fa-solid fa-utensils"></i><span>Cooking</span></li>
       </ul>
 
     </div>

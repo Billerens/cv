@@ -254,6 +254,11 @@ p {
 }
 
 .interest ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
   list-style: none;
   color: #22586B;
   font-weight: 600;
@@ -262,16 +267,32 @@ p {
 
 .interest ul li .fa-solid {
   color: #42A9CF;
-  font-size: 20px;
-  width: 30px;
+  font-size: 25px;
+  min-width: 35px;
+  text-align: center;
 }
 
 .clickable {
   cursor: pointer;
 }
 
+#break {
+  display: none;
+  position: absolute;
+  right: -90px;
+  width: 50px;
+  height: 50px;
+}
+
+#break.animated {
+  display: block;
+  clip-path: polygon(12% 36%, 29% 25%, 16% 52%, 31% 76%, 13% 68%, 19% 86%, 0 75%, 0 36%, 16% 9%);
+  background: #fff;
+}
+
 #css-percent.animated {
   animation: breakout 5s forwards;
+  cursor: unset;
   z-index: 1;
 }
 
@@ -279,21 +300,12 @@ p {
   animation: shake 0.3s 0.5s, shake 0.3s 1s;
 }
 
-#breakable.animated::after {
-  content: '';
-  position: absolute;
-  right: -90px;
-  width: 50px;
-  height: 50px;
-  clip-path: polygon(12% 36%, 29% 25%, 16% 52%, 31% 76%, 13% 68%, 19% 86%, 0 75%, 0 36%, 16% 9%);
-  background: #fff;
-}
-
 @keyframes breakout {
-  0% {width: 70%;}
+  0% {width: 70%}
   10% {width: 100%}
+  15% {width: 100%}
   20% {width: calc(100% + 40px)}
-  100% {width: 100vw}
+  100% {width: 900%}
 }
 
 @keyframes shake {
@@ -332,7 +344,7 @@ p {
     grid-template-columns: 1fr;
   }
 
-  #breakable.animated::after {
+  #break.animated {
     top: 2px
   }
 }
