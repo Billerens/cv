@@ -116,6 +116,11 @@ p {
   color: #fff;
 }
 
+.details {
+  color: #fff;
+  text-decoration: unset;
+}
+
 .contacts.education li {
   margin-bottom: 15px;
 }
