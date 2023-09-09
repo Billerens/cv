@@ -21,11 +21,19 @@
     .company_and_year {
       min-width: 150px;
 
+      @media (max-width: 768px) {
+        margin-bottom: 10px;
+      }
+
       h5 {
         text-transform: uppercase;
         color: #6FA0B3;
         font-weight: 600;
       }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
 
     .description {

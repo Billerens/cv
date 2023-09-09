@@ -9,6 +9,45 @@
     display: block;
     clip-path: polygon(12% 36%, 29% 25%, 16% 52%, 31% 76%, 13% 68%, 19% 86%, 0 75%, 0 36%, 16% 9%);
     background: #fff;
+
+    @media (max-width: 768px) {
+      top: 4px;
+    }
+  }
+}
+
+#mario-pipe {
+  position: absolute;
+  height: 100px;
+  z-index: 2;
+  top: 100%;
+  left: 2vw;
+  transition: transform 2.5s;
+
+  &.animated {
+    transform: translate(0, -100px);
+  }
+}
+
+#mario {
+  position: absolute;
+  height: 64px;
+  top: 100%;
+  z-index: 1;
+  visibility: hidden;
+  left: 3vw;
+  transition: transform 1.5s;
+
+  &.animated {
+    visibility: visible;
+    transform: translate(0, -164px);
+  }
+  
+  &.moving {
+    // animation: mario-jump-n-move 10s linear;
+    offset-rotate: 0deg;
+    animation: mario-jump-n-move 6600ms ease-in;
+    offset-path: path("M22,28 c30,-100 140,-100 180,105 l2500,0");
   }
 }
 
@@ -24,6 +63,35 @@
 
 #container.animated {
   animation: shake 0.3s 0.5s, shake 0.3s 1s;
+}
+
+@keyframes mario-jump-n-move {
+  // 0% {
+  //   transform: translate(0, -169px);
+  // }
+  // 10% {
+  //   transform: translate(0, -169px) translate(60px, -100px);
+  // }
+  // 20% {
+  //   transform: translate(0, -169px) translate(60px, -100px) translate(80px, 200px); 
+  // }
+  // 100% {
+  //   transform: translate(0, -169px) translate(60px, -100px) translate(80px, 200px) translate(1400px, 0px); 
+  // }
+  0% {
+    offset-distance: 0%;
+  }
+  15% {
+    offset-distance: 11%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes pipe-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(0, -100px); }
 }
 
 @keyframes breakout {
@@ -44,25 +112,13 @@
 }
 
 @keyframes plane-move-in {
-  0% {
-    transform: scale(5) translate(-10vw, -10vh) rotate(60deg);
-  }
-  80% {
-    transform: scale(1.6) rotate(20deg);
-  }
-  100% {
-    transform: scale(1) translate(0%, 0%)
-  }
+  0% { transform: scale(5) translate(-10vw, -10vh) rotate(60deg); }
+  80% { transform: scale(1.6) rotate(20deg); }
+  100% { transform: scale(1) translate(0%, 0%) }
 }
 
 @keyframes plane-move-out {
-  0% {
-    transform: scale(1) translate(0%, 0%);
-  }
-  20% {
-    transform: scale(2) translate(-30px, -30px) rotate(20deg);
-  }
-  100% {
-    transform: scale(0.1) translate(200vw, -200vh);
-  }
+  0% { transform: scale(1) translate(0%, 0%); }
+  20% { transform: scale(2) translate(-30px, -30px) rotate(20deg); }
+  100% { transform: scale(0.1) translate(200vw, -200vh); }
 }

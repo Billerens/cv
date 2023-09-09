@@ -7,6 +7,10 @@
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
     h4 {
       text-transform: uppercase;
       color: #6FA0B3;

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/style.skills.css">
   <link rel="stylesheet" href="css/style.profile.css">
   <link rel="stylesheet" href="css/style.animations.css">
-  <script src="js/index.js"></script>
+  <script type='module' src="js/index.js"></script>
   <title>CV. I guess...</title>
 </head>
 <body>
@@ -46,7 +46,7 @@
           </a>
         </li>
         <li>
-          <span class="icon paper-plane" id="paper-plane" onclick="onPlaneClick()">
+          <span class="icon paper-plane clickable" id="paper-plane" onclick="onPlaneClick()">
             <i class="fa fa-paper-plane"></i>
           </span>
           <a class="details" href="tg://resolve?domain=ibillerens">
@@ -207,7 +207,10 @@
       <h2 class="about_title">Interests</h2>
 
       <ul>
-        <li><i class="fa-solid fa-gamepad"></i><span>Gaming</span></li>
+        <li class="clickable" onclick="onGamingIconClick()">
+          <i class="fa-solid fa-gamepad"></i>
+          <span>Gaming</span>
+        </li>
         <li><i class="fa-solid fa-book"></i><span>Reading</span></li>
         <li><i class="fa-solid fa-code"></i><span>Coding</span></li>
         <li><i class="fa-solid fa-utensils"></i><span>Cooking</span></li>
@@ -215,7 +218,10 @@
 
     </div>
   </div>
-
 </div>
+
+<img class="sprites mario-pipe" id="mario-pipe" src="assets/mario/mario-pipe.svg"/>
+<img class="sprites mario" id="mario" src="assets/mario/mario-standing.png"/>
+
 </body>
 </html>

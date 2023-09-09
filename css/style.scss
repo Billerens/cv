@@ -16,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  overflow-y: hidden;
   min-height: 100vh;
 }
 
@@ -66,30 +67,5 @@ p {
   .container {
     margin: 10px;
     grid-template-columns: 1fr;
-  }
-  .interest ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .about .experience {
-    flex-direction: column;
-  }
-
-  .about .experience .company_and_year {
-    margin-bottom: 10px;
-  }
-
-  .interest ul {
-    grid-template-columns: 1fr;
-  }
-
-  .skills .experience {
-    grid-template-columns: 1fr;
-  }
-
-  #break.animated {
-    top: 4px;
   }
 }
