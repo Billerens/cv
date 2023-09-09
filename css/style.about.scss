@@ -1,0 +1,39 @@
+.about {
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &_title {
+    color: #22586B;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+
+    .company_and_year {
+      min-width: 150px;
+
+      h5 {
+        text-transform: uppercase;
+        color: #6FA0B3;
+        font-weight: 600;
+      }
+    }
+
+    .description {
+      h4 {
+        text-transform: uppercase;
+        color: #42A9CF;
+        font-size: 16px;
+      }
+    }
+  }
+}

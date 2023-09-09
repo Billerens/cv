@@ -1,5 +1,13 @@
-const colors = ['#ffc000', '#ff3b3b', '#ff8400'];
-const bubbles = 25;
+const colors = {
+  explosion: ['#ffc000', '#ff3b3b', '#ff8400'],
+  flight: ['#d5edff', '#a5d4ff', '#6daaee', '#3858f9', '#043c9a']
+};
+const bubbles = {
+  explosion: 25,
+  flight: 7,
+};
+
+let planeInterval;
 
 const onCssPercentClick = () => {
   const cssPercentElement = document.getElementById('css-percent');
@@ -11,18 +19,89 @@ const onCssPercentClick = () => {
   setTimeout(() => {
     breakElement.classList.add('animated');
     const {x, y} = breakElement.getBoundingClientRect();
-    explode(x + window.scrollX, y + window.scrollY);
+    explode({
+      x: x + window.scrollX, 
+      y: y + window.scrollY, 
+      pallete: colors.explosion, 
+      count: bubbles.explosion
+    });
   }, 1000);
 }
 
+const listenDomLoaded = (event) => {
+  onPlaneAppear();
+}
 
-const explode = (x, y) => {
+document.addEventListener("DOMContentLoaded", listenDomLoaded);
+
+const cleaners = {
+  '4500': () => {
+    document.removeEventListener('DOMContentLoaded', listenDomLoaded);
+    clearInterval(planeInterval);
+  }
+}
+
+Object.keys(cleaners).map((timeout) => {
+  setTimeout(cleaners[timeout], timeout);
+})
+
+const onPlaneAppear = () => {
+  const planeElement = document.getElementById('paper-plane');
+
+  planeInterval = setInterval(() => {
+    const {x, y} = planeElement.getBoundingClientRect();
+    explode({
+      x: x + window.scrollX + 10, 
+      y: y + window.scrollY + 40, 
+      pallete: colors.flight, 
+      count: bubbles.flight,
+      sizeFrom: 5,
+      sizeTo: 15,
+    });
+  }, 150);
+}
+
+const onPlaneClick = () => {
+  const planeElement = document.getElementById('paper-plane');
+  const planeParent = planeElement.parentNode;
+  const clonedPlaneElement = planeElement.cloneNode(true);
+
+  planeElement.classList.add('animated');
+
+  const planeClickInterval = setInterval(() => {
+    const {x, y} = document
+      .getElementById('paper-plane')
+      .getBoundingClientRect();
+
+    explode({
+      x: x + window.scrollX + 10, 
+      y: y + window.scrollY + 40, 
+      pallete: colors.flight, 
+      count: bubbles.flight,
+      sizeFrom: 5,
+      sizeTo: 15,
+    });
+  }, 150);
+  setTimeout(() => {
+    planeElement.remove();
+    planeParent.insertBefore(clonedPlaneElement, planeParent.firstChild);
+    setTimeout(() => {
+      clearInterval(planeClickInterval);
+    }, 4000);
+  }, 2000)
+}
+
+
+const explode = ({
+  x, y, pallete, count, 
+  sizeFrom, sizeTo,
+}) => {
   let particles = [];
   let ratio = window.devicePixelRatio;
   let c = document.createElement('canvas');
   let ctx = c.getContext('2d');
 
-  const r = (a, b, c) => parseFloat((Math.random() * ((a ? a : 1) - (b ? b : 0)) + (b ? b : 0)).toFixed(c ? c : 0));
+  const rand = (a, b, c) => parseFloat((Math.random() * ((a ? a : 1) - (b ? b : 0)) + (b ? b : 0)).toFixed(c ? c : 0));
 
   const render = (particles, ctx, width, height) => {
     requestAnimationFrame(() => render(particles, ctx, width, height));
@@ -61,16 +140,16 @@ const explode = (x, y) => {
   c.height = 200 * ratio;
   document.body.appendChild(c);
 
-  for (let i = 0; i < bubbles; i++) {
+  for (let i = 0; i < count; i++) {
     particles.push({
       x: c.width / 2,
       y: c.height / 2,
-      radius: r(20, 30),
-      color: colors[Math.floor(Math.random() * colors.length)],
-      rotation: r(0, 360, true),
-      speed: r(8, 12),
+      radius: rand(sizeFrom ?? 20, sizeTo ?? 30),
+      color: pallete[Math.floor(Math.random() * pallete.length)],
+      rotation: rand(0, 360, true),
+      speed: rand(8, 12),
       friction: 0.9,
-      opacity: r(0, 0.5, true),
+      opacity: rand(0, 0.5, true),
       yVel: 0,
       gravity: 0.1
     });

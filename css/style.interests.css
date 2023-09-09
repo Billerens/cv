@@ -1,0 +1,1 @@
+.interest ul{display:grid;grid-template-columns:repeat(4, 1fr)}.interest ul li{display:flex;flex-direction:row;align-items:center;justify-items:center;gap:5px;list-style:none;color:#22586b;font-weight:600;margin:10px 0}.interest ul li .fa-solid{color:#42a9cf;font-size:25px;min-width:35px;text-align:center}

@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  background: #94D6EE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  color: #333
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 50px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.15);
+
+  .sider {
+    position: relative;
+    padding: 40px;
+    background: #22586B;
+  }
+
+  .main {
+    position: relative;
+    padding: 40px;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 10px;
+    grid-template-columns: 1fr;
+  }
+  .interest ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about .experience {
+    flex-direction: column;
+  }
+
+  .about .experience .company_and_year {
+    margin-bottom: 10px;
+  }
+
+  .interest ul {
+    grid-template-columns: 1fr;
+  }
+
+  .skills .experience {
+    grid-template-columns: 1fr;
+  }
+
+  #break.animated {
+    top: 4px;
+  }
+}
